@@ -1,0 +1,32 @@
+{
+  "name": "birceSarigul-homepage",
+  "version": "1.0.0",
+  "description": "Birce Sarıgül Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "Melih Olgac",
+  "license": "Bilgi",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.0",
+    "@chakra-ui/react": "^2.2.1",
+    "@chakra-ui/theme-tools": "^2.0.0",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "framer-motion": "^6.3.11",
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.4.0",
+    "react-player": "^2.10.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-next": "^12.1.6",
+    "prettier": "^2.6.2"
+  }
+}
