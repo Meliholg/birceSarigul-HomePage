@@ -12,10 +12,12 @@ import {
     MenuList,
     MenuButton,
     IconButton,
-    useColorModeValue
+    useColorModeValue, useMediaQuery
 } from "@chakra-ui/react"
 import {HamburgerIcon} from "@chakra-ui/icons"
 import ThemeToggleButton from "./theme-toggle-button";
+
+
 const LinkItem =({href,path,children})=> {
     const active = path === href
     const inactiveColor = useColorModeValue('gray200','whiteAlpha.900')
@@ -30,6 +32,34 @@ const LinkItem =({href,path,children})=> {
     </NextLink>
       )
 }
+
+export function MobileNavbar (props){
+    return(
+    <Menu>
+        <MenuButton
+            as={IconButton}
+            icon={<HamburgerIcon />}
+            variant="outline"
+            aria-label="Options"
+            display={{base: "block", md:"none"}}
+        />
+        <MenuList>
+            <NextLink href="/works" passHref>
+                <MenuItem as={Link}>Works</MenuItem>
+            </NextLink>
+            <NextLink href="/posts" passHref>
+                <MenuItem as={Link}>Posts</MenuItem>
+            </NextLink>
+            <NextLink href="/about" passHref>
+                <MenuItem as={Link}>About</MenuItem>
+            </NextLink>
+            <MenuItem as={Link} href={ "https://www.bircesarigul.com"}>View Source</MenuItem>
+        </MenuList>
+    </Menu>
+    );
+}
+
+
 const Navbar = props => {
     const {path} = props
     return (
@@ -70,26 +100,7 @@ const Navbar = props => {
                 <Box flex={1} align="right">
                     <ThemeToggleButton />
                     <Box ml={2} display={{base:'inline-block'} }>
-                        <Menu>
-                            <MenuButton
-                                as={IconButton}
-                                icon={<HamburgerIcon />}
-                                variant="outline"
-                                aria-label="Options"
-                            />
-                            <MenuList>
-                                <NextLink href="/works" passHref>
-                                    <MenuItem as={Link}>Works</MenuItem>
-                                </NextLink>
-                                <NextLink href="/posts" passHref>
-                                    <MenuItem as={Link}>Posts</MenuItem>
-                                </NextLink>
-                                <NextLink href="/about" passHref>
-                                    <MenuItem as={Link}>About</MenuItem>
-                                </NextLink>
-                                    <MenuItem as={Link} href={ "https://www.bircesarigul.com"}>View Source</MenuItem>
-                            </MenuList>
-                        </Menu>
+                         <MobileNavbar/>
                     </Box>
                 </Box>
             </Container>
