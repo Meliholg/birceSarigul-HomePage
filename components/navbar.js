@@ -44,11 +44,8 @@ export function MobileNavbar (props){
             display={{base: "block", md:"none"}}
         />
         <MenuList>
-            <NextLink href="/works" passHref>
-                <MenuItem as={Link}>Works</MenuItem>
-            </NextLink>
-            <NextLink href="/posts" passHref>
-                <MenuItem as={Link}>Posts</MenuItem>
+            <NextLink href="/films" passHref>
+                <MenuItem as={Link}>Films</MenuItem>
             </NextLink>
             <NextLink href="/about" passHref>
                 <MenuItem as={Link}>About</MenuItem>
@@ -93,8 +90,7 @@ const Navbar = props => {
                     flexGrow={1}
                     mt={{ base: 4, nmd: 0}}
                 >
-                <LinkItem href="/works" path={path}>Works </LinkItem>
-                <LinkItem href="/posts" path={path}>Posts </LinkItem>
+                <LinkItem href="/films" path={path}>Films </LinkItem>
                 <LinkItem href="/about" path={path}>About </LinkItem>
                 </Stack>
                 <Box flex={1} align="right">

@@ -5,88 +5,49 @@ import P from "../../components/paragraph";
 import Layout  from "../../components/layouts/article";
 import ReactPlayer from "react-player";
 
-const Work = () => (
-    <Layout title="Beyoğlu">
-        <Container>
-            <Title>
-                Beyoğlu <Badge>2021</Badge>
-            </Title>
-            <P>
-                Beyoğlu temalı kısa videolar.
-            </P>
-            <List ml={4} my={4}>
 
-                <ListItem>
-                    <AspectRatio maxW="640px" ratio={1.7} my={4}>
-                        <iframe
-                            src="https://www.youtube.com/embed/jWuvDvJf0TQ"
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </AspectRatio>
-                </ListItem>
-                <ListItem>
-                    <Meta>Youtube</Meta>
-                    <Link href="https://www.youtube.com/watch?v=jWuvDvJf0TQ">
-                        https://www.youtube.com/watch?v=jWuvDvJf0TQ<ExternalLinkIcon mx="2px" />
-                    </Link>
-                </ListItem>
-                <ListItem>
-                    <AspectRatio maxW="640px" ratio={1.7} my={4}>
-                        <iframe
-                            src="https://www.youtube.com/embed/bCxm5smf0Js"
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </AspectRatio>
-                </ListItem>
-                <ListItem>
-                    <Meta>Youtube</Meta>
-                    <Link href="https://www.youtube.com/watch?v=bCxm5smf0Js">
-                        https://www.youtube.com/watch?v=bCxm5smf0Js<ExternalLinkIcon mx="2px" />
-                    </Link>
-                </ListItem>
-                <ListItem>
-                    <AspectRatio maxW="640px" ratio={1.7} my={4}>
-                        <iframe
-                            src="https://www.youtube.com/embed/VP4-Y0rebI4"
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </AspectRatio>
-                </ListItem>
-                <ListItem>
-                    <Meta>Youtube</Meta>
-                    <Link href="https://www.youtube.com/watch?v=VP4-Y0rebI4">
-                        https://www.youtube.com/watch?v=VP4-Y0rebI4<ExternalLinkIcon mx="2px" />
-                    </Link>
-                </ListItem>
-                <ListItem>
-                    <AspectRatio maxW="640px" ratio={1.7} my={4}>
-                        <iframe
-                            src="https://www.youtube.com/embed/PSInv9IScBs"
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </AspectRatio>
-                </ListItem>
-                <ListItem>
-                    <Meta>Youtube</Meta>
-                    <Link href="https://www.youtube.com/watch?v=PSInv9IScBs">
-                        https://www.youtube.com/watch?v=PSInv9IScBs<ExternalLinkIcon mx="2px" />
-                    </Link>
-                </ListItem>
-            </List>
-        </Container>
-    </Layout>
-)
+const Work = () => {
+    let data = [
+             {
+                 id:1,
+                 imgSrc:"https://www.youtube.com/embed/jWuvDvJf0TQ" ,
+            },
+            {
+                id:2,
+                imgSrc:"https://www.youtube.com/embed/bCxm5smf0Js" ,
+            },
+            {
+                id:3,
+                imgSrc:"https://www.youtube.com/embed/VP4-Y0rebI4" ,
+            },{
+                id:4,
+                imgSrc:"https://www.youtube.com/embed/PSInv9IScBs" ,
+            },{
+                id:5,
+                imgSrc:"https://www.youtube.com/embed/UH3yU7VGQ40" ,
+            }
+    ]
+
+
+        return(
+            <>
+            <div className="videos">
+                {data.map((item,  index) =>{
+                    return(
+                        <div className="video" key={index}>
+                            <ReactPlayer
+                                width='600px' height='360px'
+                                controls
+                                url={item.imgSrc}
+                            />
+                            </div>
+                    )
+                }
+                    )
+                }
+            </div>
+            </>
+        )
+}
 
 export default Work
