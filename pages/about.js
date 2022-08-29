@@ -27,7 +27,7 @@ const Page = () => {
             <Container>
                 <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6}
                      align="center">
-                    Hello, I am the pretiest girl in the world
+                    Dünyama hoş geldiniz
                 </Box>
                 <Box display={{md: 'flex'}}>
                     <Box flexGrow={1}>

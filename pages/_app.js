@@ -5,6 +5,7 @@ import theme from '../lib/theme'
 import {AnimatePresence}  from "framer-motion";
 import './Gallery.css'
 import './videos.css'
+
 const Website =({Component,pageProps,router}) => {
     return (
         <ChakraProvider theme = {theme}>
