@@ -3,7 +3,7 @@ import VideoGallery from "../components/VideoGallery";
 
 function App(){
     return(
-        <VideoGallery/>
+       null
     )
 }
 export default App

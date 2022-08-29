@@ -44,8 +44,8 @@ export function MobileNavbar (props){
             display={{base: "block", md:"none"}}
         />
         <MenuList>
-            <NextLink href="/films" passHref>
-                <MenuItem as={Link}>Films</MenuItem>
+            <NextLink href="/works" passHref>
+                <MenuItem as={Link}>Works</MenuItem>
             </NextLink>
             <NextLink href="/about" passHref>
                 <MenuItem as={Link}>About</MenuItem>
